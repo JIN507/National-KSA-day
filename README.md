@@ -1,49 +1,47 @@
-# 🇸🇦 لعبة اليوم الوطني السعودي
+# لعبة اليوم الوطني السعودي
 ## Saudi National Day Interactive Game
-
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://jin507.github.io/National-KSA-day/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/JIN507/National-KSA-day)
-
-لعبة تفاعلية شاملة تحتفل بتاريخ وثقافة المملكة العربية السعودية في اليوم الوطني
 
 A comprehensive browser-based interactive game celebrating Saudi Arabia's history and culture for Saudi National Day.
 
-## 🎮 ميزات اللعبة / Game Features
+## Features
 
-### ثلاثة أنماط لعب / Three Game Modes
+### 🎮 Three Game Modes
 
-#### 1. **🧠 مسابقة وطنية (Quiz Game)**
-- أسئلة متعددة الخيارات عن تاريخ السعودية
-- 10 أسئلة تغطي التأسيس والملوك والإنجازات
-- نظام توقيت (45 ثانية لكل سؤال)
-- نقاط بناءً على الإجابات الصحيحة
+1. **مسابقة وطنية (Quiz Game)**
+   - Multiple-choice questions about Saudi history
+   - 10 questions covering founding, kings, achievements
+   - Timer-based gameplay (30 seconds per question)
+   - Score based on correct answers
 
-#### 2. **🏛️ لعبة المطابقة (Memory Match)**
-- ربط المناطق السعودية بعواصمها
-- 8 أزواج من المناطق والعواصم
-- نقاط بناءً على السرعة والدقة
-- مكافأة وقت للإنجاز السريع
+2. **لعبة المطابقة (Memory Match)**
+   - Match Saudi landmarks with their icons
+   - 8 pairs of famous Saudi locations
+   - Score based on speed and accuracy
+   - Time bonus for quick completion
 
-#### 3. **⚡ لعبة الالتقاط (Catch Game)**
-- التقط الرموز السعودية وتجنب الخاطئة
-- تحكم بالكيبورد (أسهم) واللمس
-- صعوبة متزايدة مع الوقت
-- هدف الوصول إلى 200 نقطة
+3. **لعبة الالتقاط (Catch Game)**
+   - Catch falling Saudi symbols (+10 points each)
+   - Avoid bombs (instant game over) and bad symbols (-10 points)
+   - No penalty for missing good symbols - fun and educational!
+   - Win by reaching 200 points
+   - Keyboard (arrow keys) and touch controls
 
 ### 🎨 Design Features
 
+- **Welcome Screen**: Personalized player name entry
+- **Player Management**: Recent players list and current player display
 - **Full Arabic RTL Support**: All UI text in Arabic
 - **Saudi Theme**: Green and white color scheme with gold accents
 - **Responsive Design**: Works on desktop and mobile devices
 - **Modern UI**: Clean, modern interface with smooth animations
-- **High Score System**: localStorage-based score tracking
+- **High Score System**: localStorage-based score tracking with player names
 - **Smooth Animations**: CSS transitions and keyframe animations
 
 ### 🏆 Scoring System
 
 - **Quiz**: 10 points per correct answer
 - **Memory**: 20 points per match + time bonus
-- **Catch**: 10 points per correct item caught
+- **Catch**: 10 points per Saudi symbol, -10 for bad symbols, 200 points to win
 
 ### 📱 Controls
 
@@ -74,20 +72,11 @@ nagame/
 └── README.md          # This file
 ```
 
-## 🚀 كيفية التشغيل / How to Run
+## How to Run
 
-### طريقة سريعة / Quick Start
-1. [العب الآن أونلاين / Play Online Now](https://jin507.github.io/National-KSA-day/)
-
-### تشغيل محلي / Local Setup
-1. افتح `index.html` في أي متصفح حديث
-2. لا يتطلب إعداد خادم - يعمل بالكامل من جانب العميل
-3. للحصول على أفضل تجربة، استخدم Chrome أو Firefox أو Safari
-
-### 📱 متوافق مع / Compatible With
-- 💻 Desktop browsers
-- 📱 Mobile browsers (iOS Safari, Chrome Mobile)
-- 🖥️ All screen sizes (responsive design)
+1. Open `index.html` in any modern web browser
+2. No server setup required - runs entirely client-side
+3. For best experience, use Chrome, Firefox, or Safari
 
 ## Educational Content
 
