@@ -1,0 +1,25 @@
+{
+  "name": "saudi-national-day-game",
+  "version": "1.0.0",
+  "description": "Interactive Saudi National Day Game celebrating Saudi Arabia's history and culture",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "saudi-arabia",
+    "national-day",
+    "game",
+    "interactive",
+    "arabic",
+    "educational"
+  ],
+  "author": "JIN507",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JIN507/National-KSA-day.git"
+  },
+  "homepage": "https://github.com/JIN507/National-KSA-day#readme"
+}
