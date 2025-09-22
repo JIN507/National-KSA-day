@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <g fill="#8B4513">
+    <!-- Trunk -->
+    <rect x="45" y="60" width="10" height="35" rx="2"/>
+  </g>
+  <g fill="#228B22">
+    <!-- Palm fronds -->
+    <ellipse cx="30" cy="25" rx="25" ry="8" transform="rotate(-30 30 25)"/>
+    <ellipse cx="70" cy="25" rx="25" ry="8" transform="rotate(30 70 25)"/>
+    <ellipse cx="50" cy="15" rx="20" ry="8"/>
+    <ellipse cx="25" cy="45" rx="20" ry="6" transform="rotate(-45 25 45)"/>
+    <ellipse cx="75" cy="45" rx="20" ry="6" transform="rotate(45 75 45)"/>
+  </g>
+</svg>

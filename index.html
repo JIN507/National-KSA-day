@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة اليوم الوطني السعودي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen active">
+        <div class="container">
+            <div class="welcome-content">
+                <div class="flag-icon">🇸🇦</div>
+                <h1 class="welcome-title">أهلاً وسهلاً</h1>
+                <p class="welcome-subtitle">مرحباً بك في لعبة اليوم الوطني السعودي</p>
+                
+                <div class="name-input-section">
+                    <label for="playerName">أدخل اسمك للبدء:</label>
+                    <input type="text" id="playerName" placeholder="اكتب اسمك هنا..." maxlength="20">
+                    <button id="startGameBtn" class="primary-btn">ابدأ اللعب</button>
+                </div>
+                
+                <div class="welcome-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🧠</span>
+                        <span>مسابقة تاريخية</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🏛️</span>
+                        <span>لعبة المطابقة</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>لعبة الالتقاط</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Menu Screen -->
+    <div id="mainMenu" class="screen">
+        <div class="container">
+            <div class="header">
+                <div class="flag-icon">🇸🇦</div>
+                <h1 class="main-title">لعبة اليوم الوطني السعودي</h1>
+                <p class="subtitle">احتفل بتاريخ المملكة العربية السعودية</p>
+                <div class="player-greeting">
+                    <span>أهلاً وسهلاً، <span id="currentPlayerName"></span>!</span>
+                    <button id="changePlayerBtn" class="change-player-btn">تغيير اللاعب</button>
+                </div>
+            </div>
+            
+            <div class="game-selection">
+                <div class="game-card" data-game="quiz">
+                    <div class="game-icon">🧠</div>
+                    <h3>مسابقة وطنية</h3>
+                    <p>اختبر معلوماتك عن تاريخ المملكة</p>
+                </div>
+                
+                <div class="game-card" data-game="memory">
+                    <div class="game-icon">🏛️</div>
+                    <h3>لعبة المطابقة</h3>
+                    <p>اربط المناطق السعودية بعواصمها</p>
+                </div>
+                
+                <div class="game-card" data-game="catch">
+                    <div class="game-icon">⚡</div>
+                    <h3>لعبة الالتقاط</h3>
+                    <p>التقط الرموز السعودية الصحيحة</p>
+                </div>
+            </div>
+            
+            <div class="scores-and-players">
+                <div class="high-scores">
+                    <h3>أعلى النتائج</h3>
+                    <div id="highScoresList"></div>
+                </div>
+                
+                <div class="recent-players">
+                    <h3>اللاعبون الأخيرون</h3>
+                    <div id="recentPlayersList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Game Screen -->
+    <div id="quizGame" class="screen">
+        <div class="game-header">
+            <button id="backToMenu" class="back-btn">← العودة</button>
+            <div class="score-info">
+                <span>النقاط: <span id="quizScore">0</span></span>
+                <span>السؤال: <span id="questionNumber">1</span>/10</span>
+                <span>الوقت: <span id="timer">30</span>ث</span>
+            </div>
+        </div>
+        
+        <div class="quiz-container">
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+            
+            <div class="question-card">
+                <h2 id="questionText"></h2>
+                <div id="answersContainer" class="answers-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Game Screen -->
+    <div id="memoryGame" class="screen">
+        <div class="game-header">
+            <button id="backToMenuMemory" class="back-btn">← العودة</button>
+            <div class="score-info">
+                <span>النقاط: <span id="memoryScore">0</span></span>
+                <span>المحاولات: <span id="attempts">0</span></span>
+                <span>الوقت: <span id="memoryTimer">0</span>ث</span>
+            </div>
+        </div>
+        
+        <div class="memory-container">
+            <div id="memoryGrid" class="memory-grid"></div>
+        </div>
+    </div>
+
+    <!-- Catch Game Screen -->
+    <div id="catchGame" class="screen">
+        <div class="game-header">
+            <button id="backToMenuCatch" class="back-btn">← العودة</button>
+            <div class="score-info">
+                <span>النقاط: <span id="catchScore">0</span></span>
+                <span>الهدف: 200 نقطة</span>
+            </div>
+        </div>
+        
+        <div class="catch-container">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div class="game-instructions">
+                <p>استخدم الأسهم أو اللمس لتحريك السلة</p>
+                <p>🎯 الهدف: اجمع 200 نقطة للفوز</p>
+                <p>🇸🇦 التقط الرموز السعودية (+10 نقاط)</p>
+                <p>💣 تجنب القنابل (تنهي اللعبة فوراً)</p>
+                <p>⚡ تجنب الرموز الخاطئة (-10 نقاط)</p>
+                <p>✨ لا تقلق إذا فاتتك الرموز الجيدة - اللعبة للمتعة!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen">
+        <div class="container">
+            <div class="game-over-content">
+                <h1>انتهت اللعبة!</h1>
+                <div class="final-score">
+                    <h2>مجموع نقاطك: <span id="finalScore">0</span></h2>
+                </div>
+                <div class="celebration-message" id="celebrationMessage"></div>
+                <div class="game-over-actions">
+                    <button id="playAgain" class="primary-btn">إعادة المحاولة</button>
+                    <button id="backToMainMenu" class="secondary-btn">القائمة الرئيسية</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
